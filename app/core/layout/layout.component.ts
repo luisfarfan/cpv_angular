@@ -4,10 +4,12 @@ import {
     Component
 } from '@angular/core';
 
+import { MyRouterLink } from '../MyRouterLink';
 
 @Component({
     selector: 'my-app',
-    templateUrl: 'app/core/layout/layout.component.html'
+    templateUrl: 'app/core/layout/layout.component.html',
+    directives: [MyRouterLink] 
 })
 export class LayoutComponent implements AfterViewInit {
     constructor(private elementRef: ElementRef) {}
