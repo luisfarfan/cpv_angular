@@ -8,8 +8,7 @@ import {
 
 
 @Component({
-    selector: '',
-    templateUrl: 'app/core/sidebar/sidebar.component.html',
+    templateUrl: 'src/core/sidebar/sidebar.component.html',
     providers: [MenuServices]
 })
 
