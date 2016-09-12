@@ -36,15 +36,14 @@ export class MyRouterLink {
                 <li class="active">
                     <a href="#"><i class="icon-stack"></i> <span>Modulo de Usuarios</span></a>
                     <ul>
-                        <li><a routerLink="/" routerLinkActive="active">Usuarios</a></li>
-                        <li><a routerLink="/add" routerLinkActive="active">Agregar</a></li>
+                        <li><a routerLink="/login" routerLinkActive="active">Usuarios</a></li>
+                        <li><a routerLink="/seguridad" routerLinkActive="active">Agregar</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
-</div>
-<router-outlet></router-outlet>`
+</div>`
 
     constructor(private dataServices: MenuServices, private compiler: Compiler, private _viewContainerRef: ViewContainerRef) {}
 

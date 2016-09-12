@@ -6,6 +6,9 @@ import {
     MenuServices
 } from './core/services/menu.service';
 
+import {LoginComponent} from './core/login/login.component';
+import {SeguridadComponent} from './core/seguridad/seguridad.component';
+
 
 const routes: Routes = getRoutes();
 
@@ -15,9 +18,9 @@ function getRoutes(){
   var results :Array<Object> = Array<Object>();
   let screens :Array<string> = ["gestion-de-aulas", "gestion-de-usuarios", "gestion-de-roles", "provincial", "departamental"]
 
-  results.push({ path: '' ,redirectTo: 'welcome', pathMatch: 'full'});
-  results.push({ path: 'welcome', loadChildren: 'app/screens/welcome.module' })
-  screens.map(screenId => results.push({path: screenId, loadChildren: 'app/screens/' + screenId + '.module' }))
+  results.push({ path: '', component:LoginComponent })
+  results.push({ path: 'seguridad', component:SeguridadComponent })
+  //screens.map(screenId => results.push({path: screenId, loadChildren: 'app/screens/' + screenId + '.module' }))
   console.log(results)
   return results 
 }
