@@ -33,7 +33,7 @@ export class MyRouterLink {
         if (this.cmpRef) {
             this.cmpRef.destroy();
         }
-        this.dataServices.getMenuLinks('?id_usuario=3').subscribe((res) => {
+        this.dataServices.getMenuLinks('?id_usuario=9').subscribe((res) => {
             localStorage.setItem('menu', JSON.stringify(res))
             let menustring = localStorage.getItem('menu')
             this.compileToComponent(res).then((factory: ComponentFactory < any > ) => {

@@ -4,9 +4,7 @@ import { Routes, RouterModule }  from '@angular/router';
 
 
 @Component({
-    template: `<H1>Segmentacion</H1>
-     Welcome
-    ` 
+    templateUrl: 'app/apps/segmentacion/segmentacion.html' 
 })
 class Segmentacion { }
 

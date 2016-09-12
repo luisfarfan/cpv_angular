@@ -36,8 +36,8 @@ export class MenuServices {
       .catch(this.handleError);
   } 
 
-  getRoutes(): Observable < Object > {
-    return this.http.get(this.routesUrl)
+  getRoutes(query:string): Observable < Object > {
+    return this.http.get(this.routesUrl+query)
       .map(this.extractData)
       .catch(this.handleError)
   }
