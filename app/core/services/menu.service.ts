@@ -25,31 +25,18 @@ import 'rxjs/add/operator/toPromise';
 export class MenuServices {
   constructor(private http: Http) {}
 
-  private menusUrl = 'http://192.168.200.123:8000/api/menu/';
-  private routesUrl = 'http://192.168.200.123:8000/api/routes/';
+  private menusUrl = 'http://192.168.32.1:8000/api/menu/';
+  private routesUrl = 'http://192.168.32.1:8000/api/routes/';
 
-  getMenuLinks(): Observable < Object > {
-    return this.http.get(this.menusUrl)
-      .map(this.extractData)
+  getMenuLinks(query:string): Observable < string > {
+    return this.http.get(this.menusUrl+query)
+      .map((res)=>{
+        return <string>res.json().menu || "";
+      })
       .catch(this.handleError);
   }
 
-  getMenuLinksString(): String{
-    let menulinks:string = ''
-    let menulinksobj:Object = []
-    
-    this.getMenuLinks().subscribe((menu)=>{
-      menulinksobj = menu
-      Object.keys(menulinksobj).forEach(data => {
-      menulinks+='<li><a href="#"><i class="icon-stack"></i> <span>'+data+'</span></a></li>'
-      
-    });
-    })
-    return menulinks
-
-  }
-
-  getRoutes(): Observable <Object> {
+  getRoutes(): Observable < Object > {
     return this.http.get(this.routesUrl)
       .map(this.extractData)
       .catch(this.handleError)
