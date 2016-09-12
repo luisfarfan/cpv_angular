@@ -25,8 +25,8 @@ import 'rxjs/add/operator/toPromise';
 export class MenuServices {
   constructor(private http: Http) {}
 
-  private menusUrl = 'http://192.168.32.1:8000/api/menu/';
-  private routesUrl = 'http://192.168.32.1:8000/api/routes/';
+  private menusUrl = 'http://192.168.200.123:8000/api/menu/';
+  private routesUrl = 'http://192.168.200.123:8000/api/routes/';
 
   getMenuLinks(query:string): Observable < string > {
     return this.http.get(this.menusUrl+query)
@@ -34,7 +34,7 @@ export class MenuServices {
         return <string>res.json().menu || "";
       })
       .catch(this.handleError);
-  }
+  } 
 
   getRoutes(): Observable < Object > {
     return this.http.get(this.routesUrl)

@@ -10,7 +10,7 @@ import { LoginComponent } from './login/login.component';
 var login = localStorage.getItem('usuario');
 var _declarations = []
 var _bootstrap = []
-
+console.log(login)
 if(login==null){
     _declarations = []
     _bootstrap = [LoginComponent]

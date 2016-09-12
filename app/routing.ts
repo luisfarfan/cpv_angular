@@ -19,7 +19,8 @@ function getRoutes(){
   let screens :Array<string> = ["gestion-de-aulas", "gestion-de-usuarios", "gestion-de-roles", "provincial", "departamental"]
 
   results.push({ path: '', component:LoginComponent })
-  results.push({ path: 'seguridad', component:SeguridadComponent })
+  results.push({ path: 'welcome', loadChildren:'app/core/welcome/welcome.module' })
+  results.push({ path: 'segmentacion', loadChildren:'app/apps/segmentacion/segmentacion.module' })
   //screens.map(screenId => results.push({path: screenId, loadChildren: 'app/screens/' + screenId + '.module' }))
   console.log(results)
   return results 
