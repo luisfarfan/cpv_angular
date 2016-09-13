@@ -39,10 +39,8 @@ export class LoginService {
     }
 
     doLogin(queryparameters:string): Observable < Object > {
-
         let _body = queryparameters;
         return this.http.get(this.loginUrl+_body).map(this.extractData).catch(this.handleError)
-
     }
 
     logout(key: string = '') {

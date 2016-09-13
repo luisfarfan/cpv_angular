@@ -9,15 +9,15 @@ import {
   RouterModule
 } from '@angular/router';
 
-
 @Component({
-  templateUrl: 'app/apps/segmentacion/segmentacion.html'
+  templateUrl: 'app/apps/segmentacion/segmentacion.html',
+
 })
 class Segmentacion {
+  
   private hola:string = 'HOLA!';
-
-  alertar() {
-    alert(this.hola)
+  drop(algo){
+    
   }
 }
 

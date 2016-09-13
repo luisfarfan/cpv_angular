@@ -6,7 +6,11 @@ import { Routes, RouterModule }  from '@angular/router';
 @Component({
     templateUrl: 'app/core/welcome/welcome.html'
 })
-class Welcome { }
+class Welcome {
+  drop(algo){
+    console.log(algo)
+  }
+ }
 
 const routes: Routes = [{ path: '', component: Welcome}];
 
