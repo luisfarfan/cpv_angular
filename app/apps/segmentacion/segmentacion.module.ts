@@ -38,9 +38,10 @@ import {
 class Segmentacion {
   private ccdd :any;
   private tabledata:boolean = false;
+  private registros;
   private departamentos:DepartamentoInterface;
   private provincias:ProvinciaInterface;
-  private distritos:Object=[];
+  private distritos:DistritoInterface;
 
   constructor(private segmentacionservice: SegmentacionService) {
     this.cargarDepa()
@@ -56,17 +57,24 @@ class Segmentacion {
     this.ccdd = ccdd;
     this.segmentacionservice.getProvincias(ccdd, ccpp).subscribe(res => {
       this.provincias = < ProvinciaInterface > res;
+      console.log(this.provincias)
     })
+    this.distritos.ccdi = ''
+    this.distritos.distrito = ''
+    this.tabledata = false;
   }
 
-  cargarDistritos(ccpp: string, ccdi: string = "0") {
-    let ccdd: string = this.ccdd;
+  cargarDistritos(ccpp: string) {
+    this.segmentacionservice.getDistritos(this.ccdd, ccpp,"0").subscribe(res => {
+      this.distritos = < DistritoInterface > res;
+    })
     this.cargarTabla()
-
   }
+
   cargarTabla(){
     this.segmentacionservice.getTabla().subscribe(res=>{
       this.tabledata = true
+      this.registros=res;
     })
   }
 
