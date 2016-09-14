@@ -1,8 +1,65 @@
-<H1>Segmentacion</H1>
-<select (change)="drop($event.target.value)">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-</select>
-     Welcome!
+<!-- Content area -->
+<div class="content">
+
+    <div class="col-md-3">
+        <select class="browser-default" name="departamentos" (change)="cargarProvincias($event.target.value)">
+                            <option *ngFor="let el of departamentos" value="{{ el.ccdd }}">{{ el.departamento }}</option>
+                        </select>
+    </div>
+
+    <div class="col-md-3">
+        <select class="browser-default" name="provincias" [(ngModel)]="provincias" (change)="cargarDistritos($event.target.value)">
+                            <option *ngFor="let e of provincias" value="{{ e.ccpp }}">{{ e.provincia }}</option>
+                        </select>
+    </div>
+
+    <div class="col-md-3">
+        <select class="browser-default" name="distritos" [(ngModel)]="distritos">
+            <option *ngFor="let el of distritos"></option>
+        </select>
+    </div>
+
+
+    <button type="button" (click)="procesar()" class="btn btn-primary">Procesar</button>
+
+    <a class="btn btn-default">EXCEL <i class="fa fa-download"></i></a>
+    <div class="table-responsive" *ngIf="tabledata">
+        <table class="table">
+            <thead class="thead-inverse">
+                <tr>
+                    <th width="100px">Departamento</th>
+                    <th width="100px">Provincia</th>
+                    <th width="100px">Distrito</th>
+                    <th width="100px">Zona / AER</th>
+                    <th width="100px">Nro. de secciones</th>
+                    <th width="100px">Nro. de AEU</th>
+                    <th width="100px">Estado</th>
+                    <th width="100px">Ver</th>
+                    <th width="100px">Descargar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr nf-for="let registro of registros">
+                    <td>{{registro.departamento}}</td>
+                    <td>{{registro.provincia}}</td>
+                    <td>{{registro.distrito}}</td>
+                    <td>{{registro.zona}}</td>
+                    <td>{{registro.nro_seccion}}</td>
+                    <td>{{registro.nro_aeu}}</td>
+                    <td>
+                        <span class="label label-success">{{registro.estado_seg}}</span>
+                    </td>
+                    <td>
+                        <a class="btn btn-default"> <i class="fa fa-eye"></i></a>
+                    </td>
+                    <td>
+                        <a class="btn btn-default"> <i class="fa fa-download"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="demo_pag1"></div>
+
+</div>

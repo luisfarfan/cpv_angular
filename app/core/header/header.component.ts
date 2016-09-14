@@ -7,8 +7,9 @@ import {LoginService} from '../services/login/login.service';
     providers: [LoginService]
 })
 export class HeaderComponent {
+    private hola= [1,2,3,4,5,6,33,3,4,5,5]
     constructor(private loginservice : LoginService){
-
+        
     }
 
     logout(){
