@@ -2,30 +2,38 @@ import {
     Component
 } from '@angular/core';
 import {
-    LoginService
-} from './../services/login/login.service';
+    NgModule
+} from '@angular/core';
 import {
+    Routes,
+    RouterModule,
     Router
 } from '@angular/router';
 import {
+    BrowserModule
+} from '@angular/platform-browser';
+import {
+    FormsModule
+} from '@angular/forms';
+import {
     LoginInterface
 } from './login.interface'
+import {
+    LoginService
+} from './../services/login/login.service';
 
 @Component({
     selector: 'my-app',
-    templateUrl: 'app/core/login/login.component.html',
-    providers: [LoginService]
+    templateUrl: 'app/core/layout/layout.component.html',
 })
-export class LoginComponent {
+class Login {
 
     private login = new LoginInterface();
     private validLogin = this.loginservice.isValidSession();
     private errorLogin = false;
 
     constructor(private loginservice: LoginService, private router: Router) {
-        console.log(this.validLogin)
         if (this.validLogin) {
-            
             this.router.navigate(['welcome'])
         }
     }
@@ -33,14 +41,23 @@ export class LoginComponent {
     doLogin() {
         let url = `?username=${this.login.username}&clave=${this.login.clave}`
         this.loginservice.doLogin(url).subscribe(res => {
-            if(Object.keys(res).length === 0){
+            if (Object.keys(res).length === 0) {
                 this.errorLogin = true;
-            }else{
+            } else {
                 document.location.reload();
-                localStorage.setItem('usuario',JSON.stringify(res));
+                localStorage.setItem('usuario', JSON.stringify(res));
             }
         })
-
-
     }
 }
+
+const routes: Routes = [{
+    path: '',
+    component: Login
+}];
+
+@NgModule({
+    imports: [RouterModule.forChild(routes), BrowserModule, FormsModule],
+    declarations: [Login]
+})
+export default class LoginModule {}

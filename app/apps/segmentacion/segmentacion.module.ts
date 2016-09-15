@@ -4,6 +4,7 @@ import {
 import {
   NgModule
 } from '@angular/core';
+import {CommonModule} from '@angular/common'
 import {
   Routes,
   RouterModule
@@ -11,9 +12,7 @@ import {
 import {
   SegmentacionService
 } from './segmentacion.service';
-import {
-  BrowserModule
-} from '@angular/platform-browser';
+
 import {
   FormsModule
 } from '@angular/forms';
@@ -27,7 +26,6 @@ import {
 import {
   DepartamentoInterface
 } from './departamento.interface';
-
 
 
 @Component({
@@ -86,7 +84,7 @@ const routes: Routes = [{
 }];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes), BrowserModule, FormsModule],
+  imports: [RouterModule.forChild(routes), CommonModule, FormsModule],
   declarations: [Segmentacion]
 })
 export default class SegmentacionModule {}
