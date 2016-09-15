@@ -17,7 +17,6 @@ import {
     providers: [LoginService]
 })
 export class LoginComponent {
-
     private login = new LoginInterface();
     private validLogin = this.loginservice.isValidSession();
     private errorLogin = false;

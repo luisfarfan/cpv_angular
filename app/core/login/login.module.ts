@@ -10,8 +10,8 @@ import {
     Router
 } from '@angular/router';
 import {
-    BrowserModule
-} from '@angular/platform-browser';
+    CommonModule
+} from '@angular/common';
 import {
     FormsModule
 } from '@angular/forms';
@@ -57,7 +57,7 @@ const routes: Routes = [{
 }];
 
 @NgModule({
-    imports: [RouterModule.forChild(routes), BrowserModule, FormsModule],
+    imports: [RouterModule.forChild(routes), CommonModule, FormsModule],
     declarations: [Login]
 })
 export default class LoginModule {}

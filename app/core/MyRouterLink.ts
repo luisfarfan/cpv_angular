@@ -74,7 +74,11 @@ export class MyRouterLink {
         @Component({
             template: template1
         })
-        class DynamicComponent {}
+        class DynamicComponent {
+            do(algo){
+                console.log(algo)
+            }
+        }
 
         @NgModule({
             imports: [BrowserModule, RouterModule],
