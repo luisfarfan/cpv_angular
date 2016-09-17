@@ -14,13 +14,10 @@ import {
 import {
     SeguridadComponent
 } from './core/seguridad/seguridad.component';
-import {
-    Http
-} from '@angular/http';
-
+import {NotFound} from './notfound';
+import {Http} from '@angular/http';
 
 const routes: Routes = getRoutes();
-
 export const routing = RouterModule.forRoot(routes);
 
 function getRoutes() {
@@ -42,9 +39,8 @@ function getRoutes() {
         let modules: Array < string > = < Array < string >> session[0]['routes'];
         modules.map(module => results.push({
             path: module,
-            loadChildren: 'app/apps/' + module + '/' + module + '.module'
+            loadChildren: `app/apps/${module}/${module}.module`
         }))
     }
-
     return results
 }
