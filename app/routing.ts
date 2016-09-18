@@ -14,7 +14,6 @@ import {
 import {
     SeguridadComponent
 } from './core/seguridad/seguridad.component';
-import {NotFound} from './notfound';
 import {Http} from '@angular/http';
 
 const routes: Routes = getRoutes();
