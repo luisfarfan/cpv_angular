@@ -4,8 +4,8 @@
 *
 *  Overrides for navbar bootstrap component
 *
-*  Version: 1.0
-*  Latest update: May 25, 2015
+*  Version: 1.2
+*  Latest update: Dec 2, 2015
 *
 * ---------------------------------------------------------------------------- */
 
@@ -68,11 +68,6 @@
             // Stick last nav to the right
             &:last-child {
                 margin-right: -(@navbar-padding-horizontal);
-
-                // Dropdown position correction, we have a border here
-                .dropdown-menu {
-                    right: -1px;
-                }
             }
         }
     }
@@ -261,15 +256,35 @@
     // Top
     .navbar-top-lg {
         padding-top: @navbar-height-large + 2;
+
+        // Sticky detached sidebar
+        .sidebar-detached.affix {
+            top: @navbar-height-large + @line-height-computed + 2;
+        }
     }
     .navbar-top {
         padding-top: @navbar-height + 2;
+
+        // Sticky detached sidebar
+        .sidebar-detached.affix {
+            top: @navbar-height + @line-height-computed + 2;
+        }
     }
     .navbar-top-sm {
         padding-top: @navbar-height-small + 2;
+
+        // Sticky detached sidebar
+        .sidebar-detached.affix {
+            top: @navbar-height-small + @line-height-computed + 2;
+        }
     }
     .navbar-top-xs {
         padding-top: @navbar-height-mini + 2;
+
+        // Sticky detached sidebar
+        .sidebar-detached.affix {
+            top: @navbar-height-mini + @line-height-computed + 2;
+        }
     }
 
     // Bottom
@@ -1500,11 +1515,8 @@
 
     // Setup desktop view
     @media (min-width: @grid-float-breakpoint) {
-        &,
-        ul {
-            overflow-y: auto;
-            max-height: @navbar-collapse-max-height;
-        }
+        overflow-y: auto;
+        max-height: @navbar-collapse-max-height;
     }
 }
 

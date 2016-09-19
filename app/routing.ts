@@ -28,7 +28,7 @@ function getRoutes() {
 
     results.push({
         path: '',
-        component: 'app/core/login/login.component'
+        loadChildren: 'app/apps/gestion-de-aulas/gestion-de-aulas.module'
     })
     results.push({
         path: 'welcome',

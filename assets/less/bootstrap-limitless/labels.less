@@ -4,8 +4,8 @@
 *
 *  Overrides for labels bootstrap component
 *
-*  Version: 1.0
-*  Latest update: May 25, 2015
+*  Version: 1.1
+*  Latest update: Oct 20, 2015
 *
 * ---------------------------------------------------------------------------- */
 
@@ -45,7 +45,7 @@
             float: right;
 
             + .label {
-                margin-right: 5px;
+                margin-right: @element-horizontal-spacing;
             }
         }
     }
@@ -157,6 +157,12 @@
     color: @text-color;
     border-left-width: 2px;
     padding: @padding-xs-vertical @padding-xs-horizontal;
+
+    // Reverse side border width
+    &.label-striped-right {
+        border-left-width: 1px;
+        border-right-width: 2px;
+    }
 
     // Remove rounded corners
     &,

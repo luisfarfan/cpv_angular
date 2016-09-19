@@ -1,31 +1,37 @@
-import {
+import {AfterViewInit,ElementRef,
   Component
 } from '@angular/core';
 import {
   NgModule
 } from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {
+  CommonModule
+} from '@angular/common';
 import {
   Routes,
   RouterModule
 } from '@angular/router';
 
 @Component({
-    template:'<h1>HOLAAAAAAAAAAAAA!</h1>'
+  templateUrl: 'app/apps/gestion-de-aulas/gestion-de-aulas.html'
 })
-class GestiondeAulas{
-    
+class GestiondeAulas implements AfterViewInit{
+constructor(private elementRef: ElementRef) {}
+  ngAfterViewInit() {
+        let tabla = $('#tabla');
+        tabla.DataTable()
+  }
 }
 
 
 const routes: Routes = [{
-    path: '',
-    component: GestiondeAulas
+  path: '',
+  component: GestiondeAulas
 }];
 @NgModule({
-    imports: [RouterModule.forChild(routes), CommonModule],
-    declarations:[GestiondeAulas]
+  imports: [RouterModule.forChild(routes), CommonModule],
+  declarations: [GestiondeAulas]
 })
-export default class GestiondeAulasModule{
+export default class GestiondeAulasModule {
 
 }

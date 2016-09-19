@@ -4,8 +4,8 @@
 *
 *  Overrides for tables bootstrap component
 *
-*  Version: 1.0
-*  Latest update: May 25, 2015
+*  Version: 1.1
+*  Latest update: Oct 20, 2015
 *
 * ---------------------------------------------------------------------------- */
 
@@ -235,6 +235,13 @@ th {
     .panel > &,
     .panel > .table-responsive > & {
         border: 1px solid @table-border-color;
+    }
+
+    // Hide border on mobile
+    @media screen and (max-width: @screen-xs-max) {
+        .table-responsive > & {
+            border: 0;
+        }
     }
 }
 

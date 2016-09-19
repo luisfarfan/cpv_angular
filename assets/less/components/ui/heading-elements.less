@@ -4,8 +4,8 @@
 *
 *  Display default and custom components in page header and panel heading
 *
-*  Version: 1.0
-*  Latest update: May 25, 2015
+*  Version: 1.1
+*  Latest update: Oct 20, 2015
 *
 * ---------------------------------------------------------------------------- */
 
@@ -48,10 +48,10 @@
 
 // Breadcrumb toggler position
 .breadcrumb-elements-toggle {
-    right: @content-padding-base;
+    right: @grid-gutter-width;
 
-    .breadcrumb-line-wide & {
-        right: @grid-gutter-width;
+    .breadcrumb-line-component & {
+        right: @content-padding-base;
     }
 }
 
@@ -427,7 +427,7 @@
             display: inline-block;
 
             & + .form-group {
-                margin-left: 15px;
+                margin-left: @content-padding-base;
             }
         }
 
@@ -504,7 +504,7 @@
                 border-width: 1px 0;
                 left: 0;
                 right: 0;
-                z-index: (@zindex-navbar - 1);
+                z-index: (@zindex-navbar - 2);
             }
         }
     }

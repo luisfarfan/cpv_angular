@@ -4,8 +4,8 @@
 *
 *  Styles for switch.min.js - checkbox/radio toggle switches
 *
-*  Version: 1.0
-*  Latest update: MaY 25, 2015
+*  Version: 1.1
+*  Latest update: Oct 20, 2015
 *
 * ---------------------------------------------------------------------------- */
 
@@ -17,7 +17,7 @@
     display: inline-block;
     cursor: pointer;
     margin-top: -2px;
-    margin-right: 7px;
+    margin-right: @element-horizontal-spacing;
     border-radius: @border-radius-base;
     border: 1px solid transparent;
     position: relative;
@@ -161,11 +161,11 @@
 
 .bootstrap-switch-label {
     text-align: center;
-    box-shadow: 0 0 0 1px fade(#000, 10%) inset;
     z-index: 100;
     color: @text-color;
     background-color: #fff;
     position: relative;
+    .box-shadow(0 0 0 1px fade(#000, 10%) inset);
 
     &:hover {
         background-color: #fcfcfc;
@@ -234,5 +234,5 @@ label.checkbox-switch.checkbox-inline {
 }
 .checkbox-switch.checkbox-right .bootstrap-switch {
     margin-right: 0;
-    margin-left: 7px;
+    margin-left: @element-horizontal-spacing;
 }

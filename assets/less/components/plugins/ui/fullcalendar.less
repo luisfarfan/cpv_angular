@@ -4,8 +4,8 @@
  *
  *  A JavaScript event calendar. Customizable and open source
  *
- *  Version: 1.0
- *  Latest update: May 25, 2015
+ *  Version: 1.1
+ *  Latest update: Oct 20, 2015
  *
  * ---------------------------------------------------------------------------- */
 
@@ -17,11 +17,6 @@
 .fc {
 	direction: ltr;
 	text-align: left;
-}
-
-// RTL
-.fc-rtl {
-	text-align: right;
 }
 
 // Calendar view
@@ -235,11 +230,6 @@
 			margin-left: 0;
 		}
 	}
-
-	.fc-rtl & > * {
-		float: right;
-		margin: 0 -1px 0 0;
-	}
 }
 
 
@@ -267,17 +257,6 @@
 
 			.fc-close {
 				float: right;
-			}
-		}
-	}
-	.fc-rtl & {
-		.fc-header {
-			.fc-title {
-				float: right;
-			}
-
-			.fc-close {
-				float: left;
 			}
 		}
 	}
@@ -520,14 +499,6 @@
 		}
 	}
 
-	// RTL
-	.fc-rtl & {
-		.fc-resizer {
-			left: -3px;
-			cursor: w-resize;
-		}
-	}
-
 	@media (min-width: @screen-lg-min) {
 		> .fc-content {
 			background-color: inherit;
@@ -540,12 +511,6 @@
 			z-index: 2;
 			position: relative;
 			background-color: inherit;
-
-			.fc-rtl & {
-				float: left;
-				padding-left: 0;
-				padding-right: 5px;
-			}
 		}
 
 		.fc-title {
@@ -612,10 +577,6 @@ a.fc-more {
 	.fc-left {
 		float: left;
 		width: 33%;
-
-		.fc-rtl & {
-			float: right;
-		}
 	}
 
 	// Right
@@ -623,18 +584,8 @@ a.fc-more {
 		float: right;
 		width: 33%;
 
-		.fc-rtl & {
-			float: left;
-		}
-
 		.fc-button-group {
 			float: right;
-		}
-
-		.fc-rtl & {
-			.fc-button-group {
-				float: left;
-			}
 		}
 	}
 
@@ -643,13 +594,6 @@ a.fc-more {
 	.fc-right {
 		> .fc-button {
 			margin-left: 10px;
-		}
-
-		.fc-rtl & {
-			> .fc-button {
-				margin-right: 10px;
-				margin-left: 0;
-			}
 		}
 	}
 
@@ -663,10 +607,6 @@ a.fc-more {
 	> * {
 		> * {
 			float: left;
-
-			.fc-rtl & {
-				float: right;
-			}
 		}
 
 		// The first thing within each left/center/right section
@@ -774,10 +714,6 @@ a.fc-more {
 	.fc-day-number {
 		text-align: right;
 
-		.fc-rtl & {
-			text-align: left;
-		}
-
 		&.fc-other-month {
 			.opacity(0.3);
 		}
@@ -810,10 +746,6 @@ a.fc-more {
 
 .fc-axis {
 	text-align: right;
-
-	.fc-rtl & {
-		text-align: left;
-	}
 
 	.fc & {
 		vertical-align: middle;
