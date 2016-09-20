@@ -75,9 +75,6 @@ export class MyRouterLink {
             template: template1
         })
         class DynamicComponent {
-            do(algo){
-                console.log(algo)
-            }
         }
 
         @NgModule({

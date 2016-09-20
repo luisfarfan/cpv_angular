@@ -34,6 +34,10 @@ function getRoutes() {
         path: 'welcome',
         loadChildren: 'app/core/welcome/welcome.module'
     })
+    results.push({
+        path: 'login',
+        loadChildren: 'app/core/pages/login/login.module'
+    })
     if (validsession) {
         let modules: Array < string > = < Array < string >> session[0]['routes'];
         modules.map(module => results.push({

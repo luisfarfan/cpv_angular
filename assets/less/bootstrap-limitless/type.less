@@ -4,8 +4,8 @@
 *
 *  Main typography overrides, including custom content
 *
-*  Version: 1.1
-*  Latest update: Oct 20, 2015
+*  Version: 1.0
+*  Latest update: May 25, 2015
 *
 * ---------------------------------------------------------------------------- */
 
@@ -77,7 +77,7 @@ textarea {
 // Mark element
 mark,
 .mark {
-    background-color: @text-color;
+    background-color: #333;
     padding: 2px 6px;
     color: #fff;
     border-radius: @border-radius-small;
@@ -122,8 +122,7 @@ svg {
 
         // Change bg color if inside panel
         .panel &,
-        .tab-content-bordered &,
-        .modal & {
+        .tab-content-bordered & {
             background-color: @panel-bg;
         }
 
@@ -266,6 +265,7 @@ svg {
 
 // Filled page header
 .page-header-filled {
+    margin: 0 0 @line-height-computed 0;
     background-color: #fafafa;
     border-bottom-width: 1px;
 
@@ -283,11 +283,11 @@ svg {
 
     // Subtitle
     small {
-        margin-left: (@grid-gutter-width / 2);
+        margin-left: @element-horizontal-spacing;
 
         &:before {
             content: '/';
-            margin-right: ((@grid-gutter-width / 2) + 5);
+            margin-right: (@element-horizontal-spacing + 5);
         }
 
         &.display-block {
@@ -301,7 +301,7 @@ svg {
 
     // Add left spacing to align with text
     i ~ small.display-block {
-        margin-left: (@icon-font-size + (@grid-gutter-width / 2) + 5);
+        margin-left: (@icon-font-size + @element-horizontal-spacing + 5);
     }
 
 
@@ -642,9 +642,8 @@ blockquote {
     footer,
     small,
     .small {
-        font-size: @font-size-base;
-        margin-top: @padding-base-vertical;
-        display: block;
+        font-size: @font-size-small;
+        margin-top: 5px;
     }
 }
 

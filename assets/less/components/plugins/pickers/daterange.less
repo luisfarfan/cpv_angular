@@ -4,8 +4,8 @@
  *
  *  Date range picker component for Bootstrap
  *
- *  Version: 1.1
- *  Latest update: Oct 20, 2015
+ *  Version: 1.0
+ *  Latest update: May 25, 2015
  *
  * ---------------------------------------------------------------------------- */
 
@@ -59,8 +59,6 @@
         .ranges,
         .calendar {
             float: none;
-            margin-left: 0;
-            margin-right: 0;
         }
     }
 
@@ -163,6 +161,10 @@
         // Highlight dates in range
         &.in-range {
             background-color: @dropdown-link-hover-bg;
+
+            &:not(.active) + .available:not(.in-range) {
+                //background-color: @dropdown-link-hover-bg;
+            }
         }
 
         // Active date
@@ -221,9 +223,8 @@
         &.secondselect,
         &.ampmselect {
             width: 60px;
-            padding-left: 0;
-            padding-right: 0;
             margin-bottom: 0;
+            display: inline-block;
         }
     }
 
@@ -234,16 +235,15 @@
         // Calendar icons
         i {
             position: absolute;
-            right: @padding-small-horizontal;
+            right: @padding-base-horizontal;
             top: auto;
             bottom: ((@icon-font-size / 2) + 2); // half icon size + borders
             color: @text-muted;
         }
 
         // Add right padding for inputs
-        input {
-            padding-left: @padding-small-horizontal;
-            padding-right: (@padding-small-horizontal + @icon-font-size + @padding-base-vertical);
+        .form-control {
+            padding-right: (@padding-base-horizontal + @icon-font-size + @padding-base-vertical)
         }
     }
 

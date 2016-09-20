@@ -16,7 +16,6 @@ pre {
 		text-shadow: 0 1px #fff;
 		word-break: normal;
 		line-height: 1.5;
-		direction: ltr;
 
 		@media print {
 			text-shadow: none;
@@ -94,11 +93,11 @@ pre {
 	position: absolute;
 	left: 0;
 	right: 0;
-	margin-top: @content-padding-large;
+	margin-top: 1em;
 	background: fade(#85ee95, 12%);  
 	pointer-events: none;
 	white-space: pre;
-	line-height: inherit;
+	line-height: @line-height-base;
 
 	&:before,
 	&:after {
@@ -165,14 +164,6 @@ pre {
 		position: relative;
 		border-left-width: 3px;
 		border-left-color: @brand-primary;
-	    background-color: #fdfdfd;
-	    background-image: -webkit-linear-gradient(transparent 50%, fade(@color-primary-700, 2.5%) 50%);
-	    background-image: -moz-linear-gradient(transparent 50%, fade(@color-primary-700, 2.5%) 50%);
-	    background-image: -ms-linear-gradient(transparent 50%, fade(@color-primary-700, 2.5%) 50%);
-	    background-image: -o-linear-gradient(transparent 50%, fade(@color-primary-700, 2.5%) 50%);
-	    background-image: linear-gradient(transparent 50%, fade(@color-primary-700, 2.5%) 50%);
-	    background-size: 3em 3em;
-	    background-origin: content-box;
 		.border-left-radius(0);
 
 		> code[data-language] {
@@ -180,7 +171,7 @@ pre {
 
 			&:before {
 				content: attr(data-language);
-				background-color: #f8f8f8;
+				background-color: #EEE;
 				display: inline-block;
 				position: absolute;
 				top: 0px;
@@ -203,6 +194,6 @@ pre {
 
 	&[data-line] {
 		position: relative;
-		padding-left: 36px;
+		padding: 12px 0 12px 36px;
 	}
 }

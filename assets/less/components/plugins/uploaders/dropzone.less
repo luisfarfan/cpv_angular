@@ -4,8 +4,8 @@
  *
  *  Open source library that provides drag’n’drop file uploads with image previews
  *
- *  Version: 1.1
- *  Latest update: Oct 20, 2015
+ *  Version: 1.0
+ *  Latest update: May 25, 2015
  *
  * ---------------------------------------------------------------------------- */
 
@@ -227,14 +227,13 @@
 		.dz-success-mark {
 			display: none;
 			position: absolute;
+			right: 8px;
+			bottom: 10px;
 			z-index: 9;
 
 			&:after {
 				font-family: 'icomoon';
 				display: block;
-				position: absolute;
-				right: 0;
-				bottom: 3px;
 				font-size: @font-size-small;
 				line-height: 1;
 				-webkit-font-smoothing: antialiased;
@@ -288,6 +287,7 @@
 				width: 0%;
 				height: 100%;
 				background-color: @brand-info;
+
 				.transition(width 0.3s ease-in-out);
 			}
 		}

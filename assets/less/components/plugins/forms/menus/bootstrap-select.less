@@ -4,8 +4,8 @@
 *
 *  Styles for bootstrap_select.js - custom select boxes plugin
 *
-*  Version: 1.1
-*  Latest update: Oct 20, 2015
+*  Version: 1.0
+*  Latest update: May 25, 2015
 *
 * ---------------------------------------------------------------------------- */
 
@@ -13,7 +13,6 @@
 // Core
 // ------------------------------
 
-// Base
 .bootstrap-select {
     width: 100%;
 
@@ -48,8 +47,7 @@
 
     // Menu title
     .popover-title {
-        font-size: @font-size-mini;
-        line-height: @line-height-mini;
+        font-size: @font-size-h6;
         margin: @list-spacing 0;
         padding: @padding-base-vertical @padding-base-horizontal;
     }
@@ -263,25 +261,6 @@
                 display: inline-block;
             }
         }
-    }
-}
-
-// Inside input group
-.input-group {
-
-    // Remove border radius
-    .bootstrap-select > .btn {
-        border-radius: 0;
-    }
-
-    // Add side border radius to the first child
-    > .bs-select-hidden:first-child + .bootstrap-select > .btn {
-        .border-left-radius(@border-radius-small);
-    }
-
-    // Add side border radius to the simulated last child
-    > .bootstrap-select:last-child > .btn {
-        .border-right-radius(@border-radius-small);
     }
 }
 

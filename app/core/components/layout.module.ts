@@ -1,22 +1,46 @@
-import {BrowserModule} from '@angular/platform-browser';
-import { NgModule }      from '@angular/core';
-import { CommonModule }  from '@angular/common';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import {Header} from './header/header.component';
-import {Notifications} from './notifications/notifications.component';
-import {SidebarItems} from './sidebar-items/sidebar-items.component';
+import {
+  BrowserModule
+} from '@angular/platform-browser';
+import {
+  NgModule
+} from '@angular/core';
+import {
+  HttpModule
+} from '@angular/http';
+import {
+  CommonModule
+} from '@angular/common';
+import {
+  ReactiveFormsModule,
+  FormsModule
+} from '@angular/forms';
+import {
+  RouterModule
+} from '@angular/router';
+import {
+  Header
+} from './header/header.component';
+import {
+  Notifications
+} from './notifications/notifications.component';
+import {
+  SidebarItems
+} from './sidebar-items/sidebar-items.component';
+import {
+  Layout
+} from './layout.component';
 
-import {routing} from './../../routing';
+import {CoreModule} from './../core.module';
 
-import { Layout } from './layout.component';
+import {
+  routing
+} from './../../routing';
 
-const LAYOUT_COMPONENTS = [Header,Notifications,SidebarItems,Layout]
+
+const LAYOUT_COMPONENTS = [Header, Notifications, SidebarItems]
 
 @NgModule({
-  imports: [CommonModule,RouterModule,FormsModule,ReactiveFormsModule,routing,BrowserModule],
-  declarations: [LAYOUT_COMPONENTS],
-  bootstrap: [Layout],
+  imports: [CommonModule,CoreModule,routing],
+  declarations: [Layout],
 })
-export class LayoutModule {
-}
+export class LayoutModule {}

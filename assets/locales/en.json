@@ -90,11 +90,7 @@
         },
 
         "changelog": {
-            "main": "Changelog <span class='label bg-blue-400'>1.2.1</span>"
-        },
-
-        "rtl": {
-            "main": "RTL version"
+            "main": "Changelog"
         },
 
 
@@ -166,7 +162,7 @@
             "header": "Page header",
             "breadcrumbs": "Breadcrumbs",
             "media": "Media objects",
-            "affix": "Affix and Scrollspy"
+            "sliders": "Slider components"
         },
 
         "appearance": {
@@ -181,25 +177,17 @@
             "grid": "Grid system"
         },
 
+        "animation": {
+            "main": "CSS3 animations"
+        },
+
         "extra": {
             "main": "Extra components",
-            "noui": "NoUI sliders",
-            "ion": "Ion range sliders",
+            "affix": "Affix and Scrollspy",
             "session": "Session timeout",
             "idle": "Idle timeout",
             "tree": "Dynamic tree views",
             "context": "Context menu"
-        },
-
-        "animations": {
-            "main": "Animations",
-            "css3": "CSS3 animations",
-            "velocity": {
-                "main": "Velocity animations",
-                "basic": "Basic usage",
-                "ui": "UI pack effects",
-                "advanced": "Advanced examples"
-            }
         },
 
         "icons": {
@@ -255,7 +243,6 @@
             "sizing": "Navigation sizing",
             "bordered": "Bordered navigation",
             "ricons": "Right icons",
-            "labels": "Labels and badges",
             "disabled": "Disabled navigation links"
         },
 
@@ -386,20 +373,15 @@
         },
 
 
-        "ext": {
-            "main": "Extensions",
-            "cropper": "Image cropper",
-            "blockui": "Block UI",
-            "dnd": "Drag and drop"
+        "velocity": {
+            "main": "Velocity animations",
+            "basic": "Basic usage",
+            "ui": "UI pack effects",
+            "advanced": "Advanced examples"
         },
 
-        "jui": {
-            "main": "JQuery UI",
-            "interactions": "Interactions",
-            "forms": "Forms",
-            "components": "Components",
-            "sliders": "Sliders",
-            "nav": "Navigation"
+        "blockui": {
+            "main": "Block UI"
         },
 
         "uploaders": {
@@ -407,6 +389,10 @@
             "plupload": "Plupload",
             "bs": "Bootstrap file uploader",
             "dropzone": "Dropzone"
+        },
+
+        "cropper": {
+            "main": "Image cropper"
         },
 
         "fc": {
@@ -450,34 +436,10 @@
         "dtext": {
             "main": "Data tables extensions",
             "reorder": "Columns reorder",
-            "rowreorder": "Row reorder",
             "fixed": "Fixed columns",
-            "fixedheader": "Fixed header",
-            "autofill": "Auto fill",
-            "key": "Key table",
-            "scroller": "Scroller",
-            "select": "Select",
-            "buttons": {
-                "main": "Buttons",
-                "init": "Initialization",
-                "flash": "Flash buttons",
-                "print": "Print buttons",
-                "html5": "HTML5 buttons"
-            },
-            "visibility": "Columns visibility"
-        },
-
-        "hot": {
-            "main": "Handsontable",
-            "basic": "Basic configuration",
-            "advanced": "Advanced setup",
-            "cols": "Column features",
-            "cells": "Cell features",
-            "types": "Basic cell types",
-            "checks": "Custom & checkboxes",
-            "ac": "Autocomplete & password",
-            "search": "Search",
-            "context": "Context menu"
+            "visibility": "Columns visibility",
+            "tools": "Table tools",
+            "scroller": "Scroller"
         },
 
         "tresp": {
@@ -519,10 +481,7 @@
             "forgot": "Reset password",
             "nonavbar": "Hide navbar",
             "transparent": "Transparent box",
-            "bg": "Background option",
-            "validation": "With validation",
-            "tabs": "Tabbed form",
-            "modals": "Inside modals"
+            "bg": "Background option"
         },
 
         "timeline": {

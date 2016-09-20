@@ -4,7 +4,7 @@ import {
     Component
 } from '@angular/core';
 @Component({
-  selector: 'cpv_layout',
+  selector: 'layout',
   template: `
     <cpv_header></cpv_header>
     <main>

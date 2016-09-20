@@ -4,8 +4,8 @@
 *
 *  Styles for selectbox.js - custom select boxes plugin
 *
-*  Version: 1.1
-*  Latest update: Oct 20, 2015
+*  Version: 1.0
+*  Latest update: May 25, 2015
 *
 * ---------------------------------------------------------------------------- */
 
@@ -19,6 +19,7 @@
     display: inline-block;
     vertical-align: middle;
     width: 100%;
+    border-radius: @input-border-radius;
 
     // All children elements
     * {
@@ -138,36 +139,36 @@
 
 // Button
 .selectboxit-btn {
-    background-color: @input-bg;
-    border: 1px solid @input-border;
-    color: @input-color;
-    border-radius: @input-border-radius;
+background-color: @input-bg;
+border: 1px solid @input-border;
+color: @input-color;
+border-radius: @input-border-radius;
 
-    // When hovered
-    &:hover {
-        .box-shadow(0 0 0 100px fade(#000, 1%) inset);
-    }
+// When hovered
+&:hover {
+    .box-shadow(0 0 0 100px fade(#000, 1%) inset);
+}
 
-    // When opened
-    &.selectboxit-open,
-    &:focus {
-        .box-shadow(0 0 0 100px fade(#000, 2%) inset);
-    }
+// When opened
+&.selectboxit-open,
+&:focus {
+    .box-shadow(0 0 0 100px fade(#000, 2%) inset);
+}
 
-    // Inherit colors if custom bg color
-    .selectboxit-container[class*=bg-] & {
-        background-color: inherit;
-        border-color: inherit;
-        color: inherit;
-    }
+// Inherit colors if custom bg color
+.selectboxit-container[class*=bg-] & {
+    background-color: inherit;
+    border-color: inherit;
+    color: inherit;
+}
 
-    // Inherit border color if custom bg color
-    .selectboxit-container[class*=border-] & {
-        border-color: inherit;
-    }
+// Inherit border color if custom bg color
+.selectboxit-container[class*=border-] & {
+    border-color: inherit;
+}
 
-    // Darken on hover and focus
-    &[class*=bg-],
+// Darken on hover and focus
+&[class*=bg-],
     .selectboxit-container[class*=bg-] & {
         &:hover {
             .box-shadow(0 0 0 100px fade(#000, 5%) inset);
@@ -177,27 +178,6 @@
         &:focus {
             .box-shadow(0 0 0 100px fade(#000, 10%) inset);
         }
-    }
-}
-
-// Inside input group
-.input-group {
-    .selectboxit-container {
-
-        // Remove border radius
-        > .selectboxit-btn {
-            border-radius: 0;
-        }
-
-        // Add side border radius to the first child
-        &:last-child > .selectboxit-btn {
-            .border-right-radius(@input-border-radius);
-        }
-    }
-
-    // Add side border radius to the simulated last child
-    > select:first-child + .selectboxit-container > .selectboxit-btn {
-        .border-left-radius(@input-border-radius);
     }
 }
 

@@ -1,4 +1,4 @@
-import {
+import {AfterViewInit,ElementRef,
   Component
 } from '@angular/core';
 import {
@@ -16,7 +16,6 @@ import {
 import {
   FormsModule
 } from '@angular/forms';
-
 import {
   ProvinciaInterface
 } from './provincia.interface';
@@ -33,7 +32,7 @@ import {
   providers: [SegmentacionService]
 })
 
-class Segmentacion {
+class Segmentacion implements AfterViewInit{
   private ccdd :any;
   private tabledata:boolean = false;
   private registros;
@@ -41,9 +40,17 @@ class Segmentacion {
   private provincias:ProvinciaInterface;
   private distritos:DistritoInterface;
 
+  ngAfterViewInit() {
+        let tabla = $('#tabla_brian');
+        console.log(tabla.DataTable());
+  }
+
   constructor(private segmentacionservice: SegmentacionService) {
     this.cargarDepa()
+    let tabla = $('#tabla_brian');
+    console.log(tabla.DataTable());
   }
+
 
   cargarDepa() {
     this.segmentacionservice.getDepartamentos().subscribe(res => {

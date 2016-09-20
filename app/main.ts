@@ -1,9 +1,7 @@
 import {
     platformBrowserDynamic
 } from '@angular/platform-browser-dynamic';
-import {
-    LayoutModule
-} from './core/components/layout.module';
+import {AppModule} from './app.module';
 import {
     enableProdMode
 } from '@angular/core';
@@ -11,4 +9,4 @@ import {
     enableProdMode()
 
 
-platformBrowserDynamic().bootstrapModule(LayoutModule)
+platformBrowserDynamic().bootstrapModule(AppModule)

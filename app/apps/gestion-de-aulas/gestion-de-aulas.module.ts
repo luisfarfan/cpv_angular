@@ -16,10 +16,11 @@ import {
   templateUrl: 'app/apps/gestion-de-aulas/gestion-de-aulas.html'
 })
 class GestiondeAulas implements AfterViewInit{
+private data : Object = [{'dep':'Lima'},{'dep':'Lima'},{'dep':'Lima'},{'dep':'Lima'},{'dep':'Lima'},{'dep':'Lima'},{'dep':'Lima'},{'dep':'Lima'}]
 constructor(private elementRef: ElementRef) {}
   ngAfterViewInit() {
         let tabla = $('#tabla');
-        tabla.DataTable()
+        tabla.DataTable();
   }
 }
 

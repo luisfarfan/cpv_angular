@@ -4,8 +4,8 @@
  *
  *  Styles for sidebar components, main navigation and sidebar itself
  *
- *  Version: 1.2
- *  Latest update: Nov 25, 2015
+ *  Version: 1.0
+ *  Latest update: May 25, 2015
  *
  * ---------------------------------------------------------------------------- */
 
@@ -62,7 +62,6 @@
 	color: @text-color;
 	border-bottom: 1px solid @panel-default-border;
 
-	// For desktop only
 	@media (min-width: @grid-float-breakpoint) {
 		border-bottom: 0;
 		border-right: 1px solid @panel-default-border;
@@ -104,7 +103,10 @@
 
 
 
-// Sidebar content
+// Sidebar content layout
+// ------------------------------
+
+// Category title
 // ------------------------------
 
 // Title
@@ -269,12 +271,6 @@
 				background-color: @gray-lighter;
 			}
 		}
-
-		// Transparent labels
-		&:not(.active) .label-transparent {
-			color: fade(#fff, 50%);
-			font-weight: 400;
-		}
 	}
 
 	// First level items
@@ -302,15 +298,6 @@
 				// Make all texts white
 				> [class*=text-] {
 					color: #fff;
-				}
-
-				// No color dependency - make all labela and badges white
-				.label,
-				.badge {
-					background-color: transparent;
-					border-color: transparent;
-					color: #fff;
-					.transition(background-color ease-in-out 0.2s);
 				}
 			}
 		}
@@ -447,8 +434,8 @@
 	// Labels and badges
 	.label,
 	.badge {
-		float: right;
-		margin-top: 1px;
+	  float: right;
+	  margin-top: 1px;
 	}
 }
 
@@ -489,12 +476,6 @@
 					}
 				}
 			}
-
-			// Transparent labels
-			.label-transparent {
-				color: @text-muted;
-				font-weight: 400;
-			}
 		}
 
 		// Child levels
@@ -510,11 +491,6 @@
 					&:hover,
 					&:focus {
 						background-color: @navigation-light-active-bg;
-						color: #fff;
-					}
-
-					// Make transparent labels white
-					.label-transparent {
 						color: #fff;
 					}
 				}
@@ -537,11 +513,9 @@
 				padding-right: @navigation-padding-base-horizontal;
 			}
 
-			// Reverse horizontal margin for icon
 			> i {
 				float: right;
 				margin-right: 0;
-				margin-left: @content-padding-base;
 			}
 		}
 
@@ -627,6 +601,11 @@
 				}
 			}
 		}
+		.sidebar-xs .sidebar-main & {
+			> ul {
+				top: (@line-height-computed + (@navigation-padding-large-vertical * 2));
+			}
+		}
 	}
 }
 
@@ -651,6 +630,11 @@
 				}
 			}
 		}
+		.sidebar-xs .sidebar-main & {
+			> ul {
+				top: (@line-height-computed + (@navigation-padding-small-vertical * 2));
+			}
+		}
 	}
 }
 
@@ -673,6 +657,11 @@
 					padding-bottom: @navigation-padding-mini-vertical - 2;
 					min-height: ((@line-height-computed + (@navigation-padding-mini-vertical * 2)) - 4);
 				}
+			}
+		}
+		.sidebar-xs .sidebar-main & {
+			> ul {
+				top: (@line-height-computed + (@navigation-padding-mini-vertical * 2));
 			}
 		}
 	}
@@ -707,11 +696,6 @@
 			.sidebar-content {
 				width: @sidebar-mini-width;
 			}
-		}
-
-		// In light sidebar
-		&.sidebar-default .sidebar-content {
-			width: @sidebar-base-width - 1; // Exclude 1px border here
 		}
 	}
 
@@ -1002,14 +986,6 @@
 								top: 50%;
 								margin-top: -@arrow-size;
 							}
-
-							// No color dependency - make all labela and badges white
-							.label,
-							.badge {
-								background-color: transparent;
-								border-color: transparent;
-								color: #fff;
-							}
 						}
 
 						// Icon
@@ -1159,25 +1135,6 @@
 				.media-right {
 					display: none;
 				}
-			}
-		}
-
-		// Navigation sizing in mini sidebar
-		.sidebar-main {
-
-			// Large
-			.navigation-lg > li > ul {
-				top: (@line-height-computed + (@navigation-padding-large-vertical * 2));
-			}
-
-			// Small
-			.navigation-sm > li > ul {
-				top: (@line-height-computed + (@navigation-padding-small-vertical * 2));
-			}
-
-			// Mini
-			.navigation-xs > li > ul {
-				top: (@line-height-computed + (@navigation-padding-mini-vertical * 2));
 			}
 		}
 
@@ -1343,12 +1300,7 @@
 // Basic styles
 .sidebar {
 	.nav-tabs {
-		border-width: 0 0 1px 0;
-
-		// Desktop view setup
 		@media (min-width: @grid-float-breakpoint) {
-			border-width: 1px;
-
 			> li {
 				> a {
 					border-bottom-color: fade(#fff, 10%);
@@ -1386,6 +1338,11 @@
 				}
 			}
 
+			// Fix right dropdown position because of the border
+			.dropdown-menu-right {
+				right: -1px;
+			}
+
 			// Opened dropdown link
 			> .open {
 				> a {
@@ -1402,8 +1359,6 @@
 
 // Tabs in default sidebar
 .sidebar-default {
-
-	// Tabs base
 	.nav-tabs {
 		@media (min-width: @grid-float-breakpoint) {
 			> li {
@@ -1439,23 +1394,6 @@
 
 				&:not(.active) > a {
 					background-color: #fafafa;
-				}
-			}
-		}
-	}
-
-	// Fix dropdown positions because of the border in light sidebar
-	.nav-justified {
-		@media (min-width: @grid-float-breakpoint) {
-			> li:first-child {
-				.dropdown-menu:not(.dropdown-menu-right) {
-					left: -1px;
-				}
-			}
-
-			> li:last-child {
-				.dropdown-menu-right {
-					right: -1px;
 				}
 			}
 		}
