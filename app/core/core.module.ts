@@ -22,17 +22,16 @@ import {
 } from './components/header/header.component';
 import {
   Notifications
-} from './components/notifications/notifications.component.ts';
+} from './components/notifications/notifications.component';
 import {
   SidebarItems
 } from './components/sidebar-items/sidebar-items.component';
 import {
   Layout
-} from './layout/layout.component';
-
+} from './components/layout.component';
 import {
   routing
-} from './../routing.ts';
+} from './../routing';
 
 
 const LAYOUT_COMPONENTS = [Header, Notifications, SidebarItems]

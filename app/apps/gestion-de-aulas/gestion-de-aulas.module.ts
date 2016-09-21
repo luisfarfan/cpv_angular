@@ -1,4 +1,6 @@
-import {AfterViewInit,ElementRef,
+import {
+  AfterViewInit,
+  ElementRef,
   Component
 } from '@angular/core';
 import {
@@ -15,12 +17,33 @@ import {
 @Component({
   templateUrl: 'app/apps/gestion-de-aulas/gestion-de-aulas.html'
 })
-class GestiondeAulas implements AfterViewInit{
-private data : Object = [{'dep':'Lima'},{'dep':'Lima'},{'dep':'Lima'},{'dep':'Lima'},{'dep':'Lima'},{'dep':'Lima'},{'dep':'Lima'},{'dep':'Lima'}]
-constructor(private elementRef: ElementRef) {}
+class GestiondeAulas implements AfterViewInit {
+  private data: Object = {}
+  constructor(private elementRef: ElementRef) {
+    this.llenar()
+  }
   ngAfterViewInit() {
-        let tabla = $('#tabla');
-        tabla.DataTable();
+    let tabla = $('#tabla');
+    tabla.DataTable();
+  }
+  llenar() {
+    this.data = [{
+      'dep': 'Lima'
+    }, {
+      'dep': 'Lima'
+    }, {
+      'dep': 'Lima'
+    }, {
+      'dep': 'Lima'
+    }, {
+      'dep': 'Lima'
+    }, {
+      'dep': 'Lima'
+    }, {
+      'dep': 'Lima'
+    }, {
+      'dep': 'Lima'
+    }]
   }
 }
 

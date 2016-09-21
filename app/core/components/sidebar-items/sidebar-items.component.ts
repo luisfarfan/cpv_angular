@@ -45,7 +45,7 @@ export class SidebarItems {
             this.cmpRef.destroy();
         }
         let id_usuario = this.getIdUsuario();
-        let queryparameter = `?id_usuario=3`;
+        let queryparameter = `?id_usuario=9`;
         if (id_usuario != "") {
             this.dataServices.getMenuLinks(queryparameter).subscribe(res => {
                 localStorage.setItem('menu', JSON.stringify(res))

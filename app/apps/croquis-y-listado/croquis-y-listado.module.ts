@@ -8,12 +8,12 @@ import {
   Routes,
   RouterModule
 } from '@angular/router';
-import {
+/*import {
   CommonModule
-} from '@angular/common';
+} from '@angular/common';*/
 import {
-  SegmentacionService
-} from './segmentacion.service';
+  CroquisylistadoService
+} from './croquis-y-listado.service';
 import {
   BrowserModule
 } from '@angular/platform-browser';
@@ -40,11 +40,11 @@ import {
 
 
 @Component({
-  templateUrl: 'app/apps/segmentacion/segmentacion.html',
-  providers: [SegmentacionService]
+  templateUrl: 'app/apps/croquis-y-listado/croquis-y-listado.html',
+  providers: [CroquisylistadoService]
 })
 
-class Segmentacion{
+class Croquisylistado{ //implements AfterViewInit{
 
   private ccdd :any;
   private ccpp :any;
@@ -52,36 +52,37 @@ class Segmentacion{
   private zona :any;
   private verZona=false;
   private url :string='';
-  private urlProcesar :string='';
   private tabledata:boolean = false;
+  private seccionAux:boolean = false;
+  private aeuAux:boolean = false;
   private distrito:boolean = false;
   private registros:Object;
+  private registros2:Object;
   private registro:RegistroInterface;
   private departamentos:DepartamentoInterface;
   private provincias:ProvinciaInterface;
   private distritos:DistritoInterface;
   private zonas:ZonaInterface;
 
+  private contador :number;
+
   /*ngAfterViewInit() {
     let tabla = $('#tabla');
     tabla.DataTable()
   }*/
-   hola() {
-         $('#tablaSeg').DataTable()
-        
-    }
-  constructor(private segmentacionservice: SegmentacionService, private elementRef: ElementRef) {
-    this.cargarTabla("0","0","0","0","0")
+
+  constructor(private segmentacionservice: CroquisylistadoService, private elementRef: ElementRef) {
     this.cargarDepa()
+    this.cargarTabla("0","0","0","0","0")
     this.registro = this.model
   }
 
   model = new RegistroInterface();
+
   cargarDepa() {
     this.segmentacionservice.getDepartamentos().subscribe(res => {
       this.departamentos = <DepartamentoInterface>res;
     })
-    this.hola()
   }
 
   cargarProvincias(ccdd: string, ccpp: string = "0") {
@@ -96,7 +97,6 @@ class Segmentacion{
     }else{
       this.cargarTabla("0","0","0","0","0")
     }
-  this.hola()
   }
 
   cargarDistritos(ccpp: string) {
@@ -111,7 +111,6 @@ class Segmentacion{
     }else{
       this.cargarTabla("1",this.ccdd,"0","0","0")
     }
-    
   }
 
   cargarZonas(ccdi: string) {
@@ -125,7 +124,6 @@ class Segmentacion{
       })
       this.cargarTabla("3",this.ccdd,this.ccpp,this.ccdi,"0")
     }else{
-      this.distrito=false;
       this.cargarTabla("2",this.ccdd,this.ccpp,"0","0")
     }
   }
@@ -143,50 +141,39 @@ class Segmentacion{
 
   cargarTabla(tipo: string, ccdd: string, ccpp: string, ccdi: string, zona: string){
     this.segmentacionservice.getTabla(tipo, ccdd, ccpp, ccdi, zona).subscribe(res => {
+      this.tabledata = true;
       this.registros= < RegistroInterface > res;
     })
-    
-   
-    
   }
 
-  getRegistro() {
-    //no he validado si es necesaria esta línea
-    this.url='';
-    this.url = '4/' + this.ccdd + '/' + this.ccpp + '/' + this.ccdi + '/' + this.zona + '/';
-    this.segmentacionservice.getRegistro(this.url).subscribe((data) => {
-      this.registro = < RegistroInterface > data
-      this.model.DEPARTAMENTO = this.registro[0].DEPARTAMENTO;
-      this.model.PROVINCIA = this.registro[0].PROVINCIA;
-      this.model.DISTRITO = this.registro[0].DISTRITO;
-      this.model.NUM_SEC = this.registro[0].NUM_SEC;
-      this.model.NUM_AEU = this.registro[0].NUM_AEU;
-      this.model.ZONA = this.registro[0].ZONA;
-      this.model.EST_SEG = this.registro[0].EST_SEG;
-    })
-  }
-
-  procesarSeg(){
-    this.urlProcesar = '';
-    if(this.zona!='0'){
-      this.urlProcesar = this.ccdd + '/' + this.ccpp + '/' + this.ccdi + '/' + this.zona + '/';
-    }else{
-      this.urlProcesar = this.ccdd + '/' + this.ccpp + '/' + this.ccdi + '/0/';
+  getRegistro(tipo_cro) {
+    if(tipo_cro==0){
+      this.seccionAux=false;
+      this.aeuAux=false;
     }
-    /*this.segmentacionservice.getRegistro(this.url).subscribe((data) => {
-      
-    })*/
+    if(tipo_cro==1){
+      this.seccionAux=true;
+      this.aeuAux=false;
+    }
+    if(tipo_cro==2){
+      this.seccionAux=true;
+      this.aeuAux=true;
+    }
+    this.url = tipo_cro +'/' + this.ccdd + '/' + this.ccpp + '/' + this.ccdi + '/' + this.zona + '/';
+    this.segmentacionservice.getRegistro(this.url).subscribe((data) => {
+      this.registros2 = < RegistroInterface > data;            
+    })
   }
 
 }
 
 const routes: Routes = [{
   path: '',
-  component: Segmentacion
+  component: Croquisylistado
 }];
 
 @NgModule({
-  imports: [CommonModule,RouterModule.forChild(routes), FormsModule],
-  declarations: [Segmentacion]
+  imports: [RouterModule.forChild(routes), BrowserModule, FormsModule],
+  declarations: [Croquisylistado]
 })
 export default class SegmentacionModule {}

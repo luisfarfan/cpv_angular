@@ -15,6 +15,7 @@ import {
     SeguridadComponent
 } from './core/seguridad/seguridad.component';
 import {Http} from '@angular/http';
+import {Layout} from './core/components/layout.component';
 
 const routes: Routes = getRoutes();
 export const routing = RouterModule.forRoot(routes);
@@ -27,11 +28,13 @@ function getRoutes() {
     let validsession: boolean = loginservice.isValidSession();
 
     results.push({
-        path: '',
+        path: 'gestion-de-aulas',
+        component: Layout,
         loadChildren: 'app/apps/gestion-de-aulas/gestion-de-aulas.module'
     })
     results.push({
-        path: 'welcome',
+        path: '',
+        component: Layout,
         loadChildren: 'app/core/welcome/welcome.module'
     })
     results.push({
@@ -42,6 +45,7 @@ function getRoutes() {
         let modules: Array < string > = < Array < string >> session[0]['routes'];
         modules.map(module => results.push({
             path: module,
+            component: Layout,
             loadChildren: `app/apps/${module}/${module}.module`
         }))
     }

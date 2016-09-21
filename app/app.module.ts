@@ -24,7 +24,7 @@ import {
 } from './routing';
 
 import {CoreModule} from './core/core.module';
-
+import {LayoutModule} from './core/components/layout.module';
 import {
   Layout
 } from './core/components/layout.component';
@@ -36,6 +36,7 @@ import {
     FormsModule,
     ReactiveFormsModule,
     CoreModule,
+    LayoutModule,
     HttpModule,
     routing,
   ],

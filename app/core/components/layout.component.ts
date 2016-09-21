@@ -1,10 +1,12 @@
 import {
     AfterViewInit,
     ElementRef,
-    Component
+    Component,
+    ViewEncapsulation
 } from '@angular/core';
 @Component({
   selector: 'layout',
+  encapsulation: ViewEncapsulation.None,
   template: `
     <cpv_header></cpv_header>
     <main>
@@ -27,15 +29,5 @@ import {
     </main>
     `
 })
-export class Layout implements AfterViewInit {
-    constructor(private elementRef: ElementRef) {}
-    ngAfterViewInit() {
-        var s = document.createElement("script");
-        s.type = "text/javascript";
-        s.src = "assets/js/core/app.js";
+export class Layout{}
 
-        
-        this.elementRef.nativeElement.appendChild(s);
-        
-    }
-}

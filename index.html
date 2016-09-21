@@ -23,8 +23,6 @@
     <!-- /core JS files -->
 
     <!-- Theme JS files -->
-    <script type="text/javascript" src="assets/js/plugins/tables/datatables/datatables.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/forms/selects/select2.min.js"></script>
 
     <!-- /core JS files -->
     <!-- 1. Load libraries -->
@@ -36,15 +34,14 @@
     <!-- 2. Configure SystemJS -->
     <script src="systemjs.config.js"></script>
     <script>
-        System.import('app').catch(function(err) {
-            console.error(err);
-        });
+      System.import('app').catch(function(err){ console.error(err); });
     </script>
 </head>
 </head>
 
 <body>
-    <cpv_layout></cpv_layout>
+    <app></app>
 </body>
-
+    <script type="text/javascript" src="assets/js/plugins/tables/datatables/datatables.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/forms/selects/select2.min.js"></script>
 </html>

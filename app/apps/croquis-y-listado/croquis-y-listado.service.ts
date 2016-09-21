@@ -25,21 +25,23 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class SegmentacionService {
+export class CroquisylistadoService {
     constructor(private http: Http) {}
 
-    private depaUrl: string = 'http://192.168.200.123:8081/segrecargaDepa/';
+    /*private depaUrl: string = 'http://192.168.200.123:8081/segrecargaDepa/';
     private provUrl: string = 'http://192.168.200.123:8081/segrecargaProv/';
     private distUrl: string = 'http://192.168.200.123:8081/segrecargaDis/';
     private zonaUrl: string = 'http://192.168.200.123:8081/segrecargaZona/';
-    private tablaUrl: string = 'http://192.168.200.123:8081/segrecargaTabla/';
-    private tablaUrlAux: string = 'http://192.168.200.123:8081/segrecargaTabla01/';
+    //private tablaUrl: string = 'http://192.168.200.123:8081/segrecargaTabla/';
+    private tablaUrlAux: string = 'http://192.168.200.123:8081/crorecargaTabla01/';
+    private tablaUrlAux2: string = 'http://192.168.200.123:8081/crorecargaTabla02/';*/
 
-    /*private depaUrl: string = 'http://127.0.0.1:8000/segrecargaDepa/';
+    private depaUrl: string = 'http://127.0.0.1:8000/segrecargaDepa/';
     private provUrl: string = 'http://127.0.0.1:8000/segrecargaProv/';
     private distUrl: string = 'http://127.0.0.1:8000/segrecargaDis/';
     private zonaUrl: string = 'http://127.0.0.1:8000/segrecargaZona/';
-    private tablaUrlAux: string = 'http://127.0.0.1:8000/segrecargaTabla01/';*/
+    private tablaUrlAux: string = 'http://127.0.0.1:8000/crorecargaTabla01/';
+    private tablaUrlAux2: string = 'http://127.0.0.1:8000/crorecargaTabla02/';
 
     getCargaDepaInicial(): Observable < Object >{
         return this.http.get(this.depaUrl).map(this.extractData).catch(this.handleError)
@@ -86,9 +88,9 @@ export class SegmentacionService {
     }
     
     getRegistro(url:string=''): Observable < Object > {
-        let tablaUrlAux2 = this.tablaUrlAux + url;
+        let tablaUrlAux3 = this.tablaUrlAux2 + url;
         if(url!=''){
-            return this.http.get(tablaUrlAux2).map(this.extractData)
+            return this.http.get(tablaUrlAux3).map(this.extractData)
         }else{
             return this.http.get(this.tablaUrlAux).map(this.extractData)
         }        
