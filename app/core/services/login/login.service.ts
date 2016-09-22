@@ -28,7 +28,7 @@ import 'rxjs/add/operator/toPromise';
 export class LoginService {
     constructor(private http: Http) {}
 
-    private loginUrl: string = 'http://192.168.200.123:8000/authentication/login/';
+    private loginUrl: string = 'http://192.168.34.37:8000/authentication/login/';
     private auth;
 
     getCookie(name) {
@@ -45,6 +45,7 @@ export class LoginService {
 
     logout(key: string = '') {
         localStorage.removeItem(key === '' ? 'usuario' : key)
+        localStorage.removeItem('menu')
     }
 
     getJsonSession(key: string = '') {

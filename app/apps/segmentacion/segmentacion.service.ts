@@ -28,12 +28,12 @@ import 'rxjs/add/operator/toPromise';
 export class SegmentacionService {
     constructor(private http: Http) {}
 
-    private depaUrl: string = 'http://192.168.200.123:8081/segrecargaDepa/';
-    private provUrl: string = 'http://192.168.200.123:8081/segrecargaProv/';
-    private distUrl: string = 'http://192.168.200.123:8081/segrecargaDis/';
-    private zonaUrl: string = 'http://192.168.200.123:8081/segrecargaZona/';
-    private tablaUrl: string = 'http://192.168.200.123:8081/segrecargaTabla/';
-    private tablaUrlAux: string = 'http://192.168.200.123:8081/segrecargaTabla01/';
+    private depaUrl: string = 'http://192.168.34.37:8081/segrecargaDepa/';
+    private provUrl: string = 'http://192.168.34.37:8081/segrecargaProv/';
+    private distUrl: string = 'http://192.168.34.37:8081/segrecargaDis/';
+    private zonaUrl: string = 'http://192.168.34.37:8081/segrecargaZona/';
+    private tablaUrl: string = 'http://192.168.34.37:8081/segrecargaTabla/';
+    private tablaUrlAux: string = 'http://192.168.34.37:8081/segrecargaTabla01/';
 
     /*private depaUrl: string = 'http://127.0.0.1:8000/segrecargaDepa/';
     private provUrl: string = 'http://127.0.0.1:8000/segrecargaProv/';

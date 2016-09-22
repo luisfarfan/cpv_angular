@@ -23,8 +23,6 @@ class GestiondeAulas implements AfterViewInit {
     this.llenar()
   }
   ngAfterViewInit() {
-    let tabla = $('#tabla');
-    tabla.DataTable();
   }
   llenar() {
     this.data = [{

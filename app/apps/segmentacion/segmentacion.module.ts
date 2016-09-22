@@ -61,30 +61,35 @@ class Segmentacion{
   private provincias:ProvinciaInterface;
   private distritos:DistritoInterface;
   private zonas:ZonaInterface;
-
+  
+  private tabla :any;
+  private tablaAux :any;
+  private contador :number=0;
+  private rows = []
   /*ngAfterViewInit() {
     let tabla = $('#tabla');
     tabla.DataTable()
   }*/
    hola() {
-         
-        
     }
   constructor(private segmentacionservice: SegmentacionService, private elementRef: ElementRef, private router:Router) {
     this.cargarTabla("0","0","0","0","0")
     this.cargarDepa()
     this.registro = this.model
   }
-   hola1(){
+   /*hola1(){
     this.router.navigate(['gestion-de-recursos']);
-  }
+  }*/
 
   model = new RegistroInterface();
+
+
   cargarDepa() {
     this.segmentacionservice.getDepartamentos().subscribe(res => {
       this.departamentos = <DepartamentoInterface>res;
+      console.log(this.departamentos)
+      this.rows.push()
     })
-    this.hola()
   }
 
   cargarProvincias(ccdd: string, ccpp: string = "0") {
@@ -99,7 +104,7 @@ class Segmentacion{
     }else{
       this.cargarTabla("0","0","0","0","0")
     }
-  this.hola()
+    this.hola()
   }
 
   cargarDistritos(ccpp: string) {
@@ -148,9 +153,8 @@ class Segmentacion{
     this.segmentacionservice.getTabla(tipo, ccdd, ccpp, ccdi, zona).subscribe(res => {
       this.registros= < RegistroInterface > res;
     })
-    
-   
-    
+    this.segmentacionservice.getTabla(tipo, ccdd, ccpp, ccdi, zona).subscribe(res => {
+    })
   }
 
   getRegistro() {
