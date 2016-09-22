@@ -16,7 +16,7 @@ import {
 				<div class="sidebar-content">
                 <div class="sidebar-category sidebar-category-visible">
                 <div class="category-content no-padding">
-                <cpv_sidebaritems></cpv_sidebaritems>
+                <cpv_sidebaritems></cpv_sidebaritems>   
                 </div>
                 </div>
                 </div>
@@ -29,5 +29,14 @@ import {
     </main>
     `
 })
-export class Layout{}
+export class Layout implements AfterViewInit {
+    constructor(private elementRef: ElementRef) {}
+    ngAfterViewInit() {
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.src = "assets/js/core/app.js";
+        this.elementRef.nativeElement.appendChild(s);
+        
+    }
+}
 

@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 import {
   Routes,
-  RouterModule
+  RouterModule,Router
 } from '@angular/router';
 import {
   CommonModule
@@ -67,13 +67,16 @@ class Segmentacion{
     tabla.DataTable()
   }*/
    hola() {
-         $('#tablaSeg').DataTable()
+         
         
     }
-  constructor(private segmentacionservice: SegmentacionService, private elementRef: ElementRef) {
+  constructor(private segmentacionservice: SegmentacionService, private elementRef: ElementRef, private router:Router) {
     this.cargarTabla("0","0","0","0","0")
     this.cargarDepa()
     this.registro = this.model
+  }
+   hola1(){
+    this.router.navigate(['gestion-de-recursos']);
   }
 
   model = new RegistroInterface();

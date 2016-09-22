@@ -6,6 +6,7 @@ import {
 } from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {
+  Router,
   Routes,
   RouterModule
 } from '@angular/router';
@@ -15,11 +16,17 @@ import {
 
 
 @Component({
-  templateUrl: '<h1>Provincial</h1>',
+  template: '<h1 (click)="hola()">Provincial</h1>',
+  
 })
 
 class Provincial {
+  constructor(private router:Router){
 
+  }
+  hola(){
+    this.router.navigate(['segmentacion']);
+  }
 }
 
 const routes: Routes = [{

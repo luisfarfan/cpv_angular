@@ -8,12 +8,7 @@ import {
 import {
     LoginService
 } from './core/services/login/login.service';
-import {
-    LoginComponent
-} from './core/login/login.component';
-import {
-    SeguridadComponent
-} from './core/seguridad/seguridad.component';
+
 import {Http} from '@angular/http';
 import {Layout} from './core/components/layout.component';
 
@@ -28,18 +23,23 @@ function getRoutes() {
     let validsession: boolean = loginservice.isValidSession();
 
     results.push({
-        path: 'gestion-de-aulas',
+        path: 'gestion-de-recursos',
         component: Layout,
-        loadChildren: 'app/apps/gestion-de-aulas/gestion-de-aulas.module'
+        loadChildren: 'app/apps/provincial/provincial.module'
     })
     results.push({
         path: '',
         component: Layout,
-        loadChildren: 'app/core/welcome/welcome.module'
+        loadChildren: 'app/apps/gestion-de-aulas/gestion-de-aulas.module'
     })
     results.push({
         path: 'login',
         loadChildren: 'app/core/pages/login/login.module'
+    })
+    results.push({
+        path: 'segmentacion',
+        component: Layout,
+        loadChildren: 'app/apps/segmentacion/segmentacion.module'
     })
     if (validsession) {
         let modules: Array < string > = < Array < string >> session[0]['routes'];

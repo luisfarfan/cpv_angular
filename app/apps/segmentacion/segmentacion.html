@@ -2,7 +2,7 @@
 <div class="content">
 
     <div class="col-md-2">
-        <label for="lDepartamento"><h5> DEPARTAMENTO</h5></label>
+        <label (click)="hola1()" for="lDepartamento"><h5> DEPARTAMENTO</h5></label>
         <select class="browser-default" name="departamentos" (change)="cargarProvincias($event.target.value)">
             <option value="0">TODOS</option>
             <option *ngFor="let el of departamentos" value="{{ el.ccdd }}">{{ el.departamento }}</option>
