@@ -38,14 +38,15 @@ export class SidebarItems {
         let session = this.loginservice.getJsonSession();
         console.log(session[0]['id_usuario'])
         return session[0]['id_usuario'] || "";
+        
     }
 
     ngAfterViewInit() {
         if (this.cmpRef) {
             this.cmpRef.destroy();
         }
-        let id_usuario = this.getIdUsuario();
-        let queryparameter = `?id_usuario=9`;
+        let id_usuario = this.getIdUsuario();   
+        let queryparameter = `?id_usuario=${id_usuario}`;
         if (id_usuario != "") {
             this.dataServices.getMenuLinks(queryparameter).subscribe(res => {
                 localStorage.setItem('menu', JSON.stringify(res))

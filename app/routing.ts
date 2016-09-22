@@ -28,12 +28,12 @@ function getRoutes() {
         loadChildren: 'app/apps/provincial/provincial.module'
     })
     results.push({
-        path: '',
+        path: 'gestion-de-aulas',
         component: Layout,
         loadChildren: 'app/apps/gestion-de-aulas/gestion-de-aulas.module'
     })
     results.push({
-        path: 'login',
+        path: '',
         loadChildren: 'app/core/pages/login/login.module'
     })
     results.push({
