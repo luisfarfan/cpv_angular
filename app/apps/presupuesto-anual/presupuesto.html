@@ -1,0 +1,924 @@
+<div class="breadcrumb-line">
+    <ul class="breadcrumb">
+        <li><a href="index.html"><i class="icon-home2 position-left"></i> Home</a></li>
+        <li><a href="components_tabs.html">Presupuesto</a></li>
+        <li class="active">Presupuesto Anual</li>
+    </ul>
+
+    <ul class="breadcrumb-elements">
+        <li><a href="#"><i class="icon-comment-discussion position-left"></i> Support</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="icon-gear position-left"></i> Settings
+                <span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-right">
+                <li><a href="#"><i class="icon-user-lock"></i> Account security</a></li>
+                <li><a href="#"><i class="icon-statistics"></i> Analytics</a></li>
+                <li><a href="#"><i class="icon-accessibility"></i> Accessibility</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="icon-gear"></i> All settings</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="col-md-12">
+    <!-- Basic layout-->
+    <form action="#" class="form-horizontal">
+        <div class="panel panel-flat">
+            <div class="panel-heading">
+                <h5 class="panel-title">Basic layout</h5>
+                <div class="heading-elements">
+                    <ul class="icons-list">
+                        <li>
+                            <a data-action="collapse"></a>
+                        </li>
+                        <li>
+                            <a data-action="reload"></a>
+                        </li>
+                        <li>
+                            <a data-action="close"></a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="heading-elements-toggle"><i class="icon-menu"></i></a>
+            </div>
+            <!--  Formulario   -->
+            <div class="panel-body">
+                <!-- Primera linea de mi formulario -->
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Tipo de Partida<span class="text-danger">*</span></label>
+                    <div class="col-lg-4">
+                        <select class="bootstrap-select-solid" data-style="bg-slate" data-width="100%" required="required">
+                                                    <option value="1">Seleccione</option>
+                                                    <option value="2">Hawaii</option>
+                                                    <option value="3">California</option>
+                                                    <option value="4">Nevada</option>
+                                                    <option value="5">Oregon</option>
+                                                </select>
+                    </div>
+                    <label class="col-lg-2 control-label">Red<span class="text-danger">*</span></label>
+                    <div class="col-lg-4">
+                        <select class="bootstrap-select-solid" data-style="bg-slate" data-width="100%" required="required">
+                                                    <option value="0">Seleccione...</option>
+                                                    <option value="1">Red Administrativa Operativa</option>
+                                                    <option value="2">Red Operativa</option>
+                                                    <option value="3">Red Técnica Administrativa</option>
+                                                </select>
+                    </div>
+                </div>
+
+                <!-- Segunda linea de mi formulario -->
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Actividad Presupuestal<span class="text-danger">*</span></label>
+                    <div class="col-lg-4">
+                        <select class="bootstrap-select-solid" data-style="bg-slate" data-width="100%" required="required">
+                                                    <option value="0">Seleccione...</option>
+                                                    <option value="1">Dirección y Gerencia</option>
+                                                    <option value="2">Procesamiento</option>
+                                                    <option value="3">Métodos</option>
+                                                </select>
+                    </div>
+                    <label class="col-lg-2 control-label">Cantidad de PEA<span class="text-danger">*</span></label>
+                    <div class="col-lg-4">
+                        <select class="bootstrap-select-solid" data-style="bg-slate" data-width="100%" required="required">
+                                                    <option value="0">Seleccione...</option>
+                                                    <option value="1">Red Administrativa Operativa</option>
+                                                    <option value="2">Red Operativa</option>
+                                                    <option value="3">Red Técnica Administrativa</option>
+                                                </select>
+                    </div>
+                </div>
+
+                <!-- Tercera linea de mi formulario -->
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Fuente de Financiamiento<span class="text-danger">*</span></label>
+                    <div class="col-lg-4">
+                        <select class="bootstrap-select-solid" data-style="bg-slate" data-width="100%" required="required">
+                                                    <option value="0">Seleccione...</option>
+                                                    <option value="1">RDR</option>
+                                                    <option value="2">RO</option>
+                                                    <option value="3">Otros</option>
+                                                </select>
+                    </div>
+                    <label class="col-lg-2 control-label">Periodo<span class="text-danger">*</span></label>
+                    <div class="col-lg-2">
+						<input type="text" class="form-control" data-mask="999" required="required">
+					</div>
+                    <div class="col-lg-2">
+                        <select class="bootstrap-select-solid" data-style="bg-slate" data-width="100%" required="required">
+                                                    <option value="0">Seleccione...</option>
+                                                    <option value="1">Días</option>
+                                                    <option value="2">Mes(es)</option>
+                                                </select>
+                    </div>
+                </div>
+
+                <!-- Cuarta linea de mi formulario-->
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Cargo Funcional<span class="text-danger">*</span></label>
+                    <div class="col-lg-4">
+                        <select class="bootstrap-select-solid" data-style="bg-slate" data-width="100%" required="required">
+                                                    <option value="0">Seleccione...</option>
+                                                    <option value="1">RDR</option>
+                                                    <option value="2">RO</option>
+                                                    <option value="3">Otros</option>
+                                                </select>
+                    </div>
+                    <label class="col-lg-2 control-label">Mes Inicio<span class="text-danger">*</span></label>
+                    <div class="col-lg-4">
+                        <select class="bootstrap-select-solid" data-style="bg-slate" data-width="100%" required="required">
+                                                    <option value="0">Seleccione...</option>
+                                                    <option value="1">Red Administrativa Operativa</option>
+                                                    <option value="2">Red Operativa</option>
+                                                    <option value="3">Red Técnica Administrativa</option>
+                                                </select>
+                    </div>
+                </div>
+
+                <!-- Quinto linea de mi formulario -->
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Cargo de Contratación<span class="text-danger">*</span></label>
+                    <div class="col-lg-4">
+                        <select class="bootstrap-select-solid" data-style="bg-slate" data-width="100%" required="required">
+                                                    <option value="0">Seleccione...</option>
+                                                    <option value="1">RDR</option>
+                                                    <option value="2">RO</option>
+                                                    <option value="3">Otros</option>
+                                                </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-right">
+                <button type="submit" class="btn btn-primary">Submit form <i class="icon-arrow-right14 position-right"></i></button>
+            </div>
+        </div>
+    </form>
+</div>
+<!--  Fin Formulario   -->
+
+
+<!--  Tabs para las tablas   -->
+
+<div class="col-md-12">
+    <div class="panel panel-flat">
+        <div class="panel-heading">
+            <div class="heading-elements">
+                <ul class="icons-list">
+                    <li>
+                        <a data-action="collapse"></a>
+                    </li>
+                    <li>
+                        <a data-action="reload"></a>
+                    </li>
+                    <li>
+                        <a data-action="close"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="tabbable">
+                <ul class="nav nav-tabs nav-tabs-highlight nav-justified">
+                    <li class="active"><a href="#justified-left-tab1" data-toggle="tab"><i class="icon-menu7 position-left"></i> Active</a></li>
+                    <li><a href="#justified-left-tab2" data-toggle="tab"><i class="icon-mention position-left"></i> Inactive</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="justified-left-tab1">
+                        					<!-- Exclude columns -->
+					<div class="panel panel-flat">
+						<table class="table datatable-colvis-exclude">
+							<thead>
+								<tr>
+					                <th>Name</th>
+					                <th>Position</th>
+					                <th>Age</th>
+					                <th>Start date</th>
+					                <th>Salary</th>
+					                <th class="text-center">Actions</th>
+					            </tr>
+							</thead>
+							<tbody>
+								<tr>
+					                <td>Tiger Nixon</td>
+					                <td>System Architect</td>
+					                <td>61</td>
+					                <td><a href="#">2011/04/25</a></td>
+					                <td><span class="label label-info">$320,800</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Garrett Winters</td>
+					                <td>Accountant</td>
+					                <td>63</td>
+					                <td><a href="#">2011/07/25</a></td>
+					                <td><span class="label label-danger">$170,750</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Ashton Cox</td>
+					                <td>Junior Technical Author</td>
+					                <td>66</td>
+					                <td><a href="#">2009/01/12</a></td>
+					                <td><span class="label label-default">$86,000</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Cedric Kelly</td>
+					                <td>Senior Javascript Developer</td>
+					                <td>22</td>
+					                <td><a href="#">2012/03/29</a></td>
+					                <td><span class="label label-success">$433,060</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Airi Satou</td>
+					                <td>Accountant</td>
+					                <td>33</td>
+					                <td><a href="#">2008/11/28</a></td>
+					                <td><span class="label label-danger">$162,700</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Brielle Williamson</td>
+					                <td>Integration Specialist</td>
+					                <td>61</td>
+					                <td><a href="#">2012/12/02</a></td>
+					                <td><span class="label label-info">$372,000</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Herrod Chandler</td>
+					                <td>Sales Assistant</td>
+					                <td>59</td>
+					                <td><a href="#">2012/08/06</a></td>
+					                <td><span class="label label-danger">$137,500</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Rhona Davidson</td>
+					                <td>Integration Specialist</td>
+					                <td>55</td>
+					                <td><a href="#">2010/10/14</a></td>
+					                <td><span class="label label-default">$97,900</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Colleen Hurst</td>
+					                <td>Javascript Developer</td>
+					                <td>39</td>
+					                <td><a href="#">2009/09/15</a></td>
+					                <td><span class="label label-success">$405,500</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Sonya Frost</td>
+					                <td>Software Engineer</td>
+					                <td>23</td>
+					                <td><a href="#">2008/12/13</a></td>
+					                <td><span class="label label-danger">$103,600</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Jena Gaines</td>
+					                <td>Office Manager</td>
+					                <td>30</td>
+					                <td><a href="#">2008/12/19</a></td>
+					                <td><span class="label label-default">$90,560</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Quinn Flynn</td>
+					                <td>Support Lead</td>
+					                <td>22</td>
+					                <td><a href="#">2013/03/03</a></td>
+					                <td><span class="label label-info">$342,000</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Charde Marshall</td>
+					                <td>Regional Director</td>
+					                <td>36</td>
+					                <td><a href="#">2008/10/16</a></td>
+					                <td><span class="label label-success">$470,600</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Haley Kennedy</td>
+					                <td>Senior Marketing Designer</td>
+					                <td>43</td>
+					                <td><a href="#">2012/12/18</a></td>
+					                <td><span class="label label-danger">$113,500</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Tatyana Fitzpatrick</td>
+					                <td>Regional Director</td>
+					                <td>19</td>
+					                <td><a href="#">2010/03/17</a></td>
+					                <td><span class="label label-info">$385,750</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- /exclude columns -->
+                    </div>
+
+                    <div class="tab-pane" id="justified-left-tab2">
+                        					<!-- Exclude columns -->
+					<div class="panel panel-flat">
+						<div class="panel-heading">
+							<h5 class="panel-title">Exclude columns</h5>
+							<div class="heading-elements">
+								<ul class="icons-list">
+			                		<li><a data-action="collapse"></a></li>
+			                		<li><a data-action="reload"></a></li>
+			                		<li><a data-action="close"></a></li>
+			                	</ul>
+		                	</div>
+						</div>
+
+
+						<table class="table datatable-colvis-exclude">
+							<thead>
+								<tr>
+					                <th>Name</th>
+					                <th>Position</th>
+					                <th>Age</th>
+					                <th>Start date</th>
+					                <th>Salary</th>
+					                <th class="text-center">Actions</th>
+					            </tr>
+							</thead>
+							<tbody>
+								<tr>
+					                <td>Tiger Nixon</td>
+					                <td>System Architect</td>
+					                <td>61</td>
+					                <td><a href="#">2011/04/25</a></td>
+					                <td><span class="label label-info">$320,800</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Garrett Winters</td>
+					                <td>Accountant</td>
+					                <td>63</td>
+					                <td><a href="#">2011/07/25</a></td>
+					                <td><span class="label label-danger">$170,750</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Ashton Cox</td>
+					                <td>Junior Technical Author</td>
+					                <td>66</td>
+					                <td><a href="#">2009/01/12</a></td>
+					                <td><span class="label label-default">$86,000</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Cedric Kelly</td>
+					                <td>Senior Javascript Developer</td>
+					                <td>22</td>
+					                <td><a href="#">2012/03/29</a></td>
+					                <td><span class="label label-success">$433,060</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Airi Satou</td>
+					                <td>Accountant</td>
+					                <td>33</td>
+					                <td><a href="#">2008/11/28</a></td>
+					                <td><span class="label label-danger">$162,700</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Brielle Williamson</td>
+					                <td>Integration Specialist</td>
+					                <td>61</td>
+					                <td><a href="#">2012/12/02</a></td>
+					                <td><span class="label label-info">$372,000</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Herrod Chandler</td>
+					                <td>Sales Assistant</td>
+					                <td>59</td>
+					                <td><a href="#">2012/08/06</a></td>
+					                <td><span class="label label-danger">$137,500</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Rhona Davidson</td>
+					                <td>Integration Specialist</td>
+					                <td>55</td>
+					                <td><a href="#">2010/10/14</a></td>
+					                <td><span class="label label-default">$97,900</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Colleen Hurst</td>
+					                <td>Javascript Developer</td>
+					                <td>39</td>
+					                <td><a href="#">2009/09/15</a></td>
+					                <td><span class="label label-success">$405,500</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Sonya Frost</td>
+					                <td>Software Engineer</td>
+					                <td>23</td>
+					                <td><a href="#">2008/12/13</a></td>
+					                <td><span class="label label-danger">$103,600</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Jena Gaines</td>
+					                <td>Office Manager</td>
+					                <td>30</td>
+					                <td><a href="#">2008/12/19</a></td>
+					                <td><span class="label label-default">$90,560</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Quinn Flynn</td>
+					                <td>Support Lead</td>
+					                <td>22</td>
+					                <td><a href="#">2013/03/03</a></td>
+					                <td><span class="label label-info">$342,000</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Charde Marshall</td>
+					                <td>Regional Director</td>
+					                <td>36</td>
+					                <td><a href="#">2008/10/16</a></td>
+					                <td><span class="label label-success">$470,600</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Haley Kennedy</td>
+					                <td>Senior Marketing Designer</td>
+					                <td>43</td>
+					                <td><a href="#">2012/12/18</a></td>
+					                <td><span class="label label-danger">$113,500</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+					            <tr>
+					                <td>Tatyana Fitzpatrick</td>
+					                <td>Regional Director</td>
+					                <td>19</td>
+					                <td><a href="#">2010/03/17</a></td>
+					                <td><span class="label label-info">$385,750</span></td>
+									<td class="text-center">
+										<ul class="icons-list">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													<i class="icon-menu9"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
+													<li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
+													<li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
+												</ul>
+											</li>
+										</ul>
+									</td>
+					            </tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- /exclude columns -->
+                    </div>
+
+                    <!-- Para el Menú-->
+                        <div class="col-md-12" align="center">
+							<div class="panel panel-body border-top-primary text-center">
+		                    	<button type="button" class="btn btn-primary"><i class="icon-list-unordered position-left"></i> Detalles</button>
+		                    	<button type="button" class="btn btn-primary"><i class="icon-pencil position-left"></i> Editar</button>
+		                    	<button type="button" class="btn btn-primary"><i class="icon-trash position-left"></i> Eliminar</button>
+		                    	<button type="button" class="btn btn-primary"><i class="icon-sync position-left"></i> Refrescar</button>
+		                    	<button type="button" class="btn btn-primary"><i class="icon-file-excel position-left"></i> Exportar</button>
+							</div>
+						</div>
+
+                    <!-- Fin del Menú  -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Fin Tabs de las tablas  -->
